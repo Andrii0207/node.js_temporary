@@ -5,8 +5,8 @@ export const handleSaveError = (error, data, next) => {
 }
 
 
-export const setUpdateSettings = function (next) {
+export function setUpdateSettings(next) {
     this.options.new = true;
-    this.options.validators = true;
+    this.options.runValidators = true;
     next();
-}
+} 

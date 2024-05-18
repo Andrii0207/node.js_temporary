@@ -12,12 +12,15 @@ const removeContact = id => Contact.findByIdAndDelete(id)
 
 const addContact = data => Contact.create(data);
 
-const updateContact = (id, data) => Contact.findByIdAndUpdate(id, data)
+const updateContact = (id, body) => Contact.findByIdAndUpdate(id, body)
+
+const updateStatusContact = (id, body) => Contact.findByIdAndUpdate(id, body, { new: true })
 
 export default {
     listContacts,
     getContactById,
     removeContact,
     addContact,
-    updateContact
+    updateContact,
+    updateStatusContact
 } 
